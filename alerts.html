@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Leaflet.js map stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+        integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+        integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+    <title>Be Aware | SDOMAS</title>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/73cb631da8.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <section id="title">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">SDAMOS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="/aware">Be Aware</a></li>
+                        <li class="nav-item dropdown dropdown-center"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Be Prepared</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="/prepared">Be Prepared</a></li>
+                                <li><a class="dropdown-item" href="/map">Evacuation Center Map</a></li>
+                            </ul>
+                        <li class="nav-item dropdown dropdown-center"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Be Informed</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="/informed">Informed</a></li>
+                                <li><a class="dropdown-item" href="/alerts">Mobile Hazard Alerts</a></li>
+                            </ul>
+                        <li class="nav-item"><a class="nav-link" href="/search">
+                            <i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!-- Content -->
+    <section id="content">
+        <div class="container-fluid title-color">
+            <div class="row">
+                <div class="b-pad">
+                    <h1>Mobile Hazard Alerts</h1>
+                    <h4>Amaran Mudah Alih</h4>
+                    <p>Mobile Hazard Alerts allow you to receive information about disaster hazards in Malaysia.
+                        Opt in to get SMSs, with data from METMalaysia's MET API, and powered by Twilio's messaging API.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <form class="container-fluid">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Mobile Number | Nombor Telefon">
+                        <button class="btn btn-primary" type="submit" id="opt-in">Opt In</button>
+                    </div>
+                    <p>Once opted in to get messages, you are free to opt out at any time through the link in the message.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="border-top" style="padding: 50px;">
+            <div class="row">
+                <div class="container-fluid">
+                    Copyright © 2022 MSU
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+</html>

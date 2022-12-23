@@ -1,0 +1,89 @@
+/*  Colors
+    Red #e63946
+    Mint #7AE582
+    blue #364E68
+    light blue #B0DFF3
+    Light text #8f8f8f
+
+    Icons
+    <i class="fa-solid fa-triangle-exclamation"></i> Warning Icon
+    <i class="fa-solid fa-map-location-dot"></i> Map Icon
+    <i class="fa-solid fa-arrow-up-right-from-square"></i> Link Icon
+    <i class="fa-solid fa-mobile-screen"></i> Phone 
+    <i class="fa-solid fa-water"></i> Water Icon
+    <i class="fa-solid fa-house-flood-water"></i> House Flood
+    <i class="fa-solid fa-cloud-bolt"> Thunder cloud
+    <i class="fa-solid fa-hill-rockslide"> Rock slide
+    <i class="fa-solid fa-house-flood-water"> Flood house
+    https://fontawesome.com/search?o=r&m=free&c=weather Weather Icons
+ */
+body {
+    text-align: center;
+    color: #364E68;
+}
+h4 {
+    font-style: italic;
+}
+#content {
+    text-align: left;
+}
+/* Navbar */
+.navbar {
+    background-color: #364E68;
+}
+.dropdown-menu {
+    background-color: #364E68;
+}
+/* Title */
+#title .container {
+    padding: 5% 5%;
+}
+.title-color {
+    background-color: #B0DFF3;
+}
+.content-container {
+    padding: 2% 7%;
+}
+#content .container-fluid {
+    padding: 5% 10%;
+}
+.b-pad {
+    padding-bottom: 2%;
+}
+.r-pad {
+    padding-right: 2%;
+}
+/* Map */
+#map {
+    height: 500px;
+    width: 100%;
+}
+/* Home */
+.home-col {
+    padding: 3% 5%;
+}
+#home-cards a {
+    text-decoration: none;
+}
+.home-icon {
+    color: #e63946;
+    font-size: 3rem;
+    padding: 10%;
+}
+/* Resource */
+.resource-box a {
+    text-decoration: none;
+}
+.resource-box a:hover {
+    text-decoration: underline;
+}
+/* Button */
+.btn {
+    background-color: #364E68;
+}
+/* Footer */
+#footer {
+    text-align: left;
+    padding: 0% 7%;
+    color: #8f8f8f;
+}
