@@ -11,6 +11,7 @@ app.use(express.static("public"));
 
 const apiKey = process.env.MET_API_KEY;
 const halfHour = (1000 * 60) * 30;
+const ten = (1000 * 60) * 10;
 
 // forecast data
 const {datasetid: set, datacategoryid: cat, locationid: loc, start_date: s, end_date: e} = {
@@ -56,7 +57,6 @@ app.get("/search", function(req, res){
 
 // opt-out page
 
-
 function QuakeCall(){
     // Warning data
     const {datasetid: wset, datacategoryid: wcat, start_date: ws, end_date: we} = {
@@ -75,6 +75,7 @@ function QuakeCall(){
     let apiURL = warningURL;
     https.get(apiURL, options, function(response){
         let apiStatusCode = response.statusCode;
+        console.log("--call status code: " + apiStatusCode);
         if(apiStatusCode === 200){
             response.on("data", function(data){
                 const apiData = JSON.parse(data);
@@ -87,7 +88,6 @@ function QuakeCall(){
                     quakeWarningTextEN = apiData.results[0].value.text.en;
                     quakeWarningTextMY = apiData.results[0].value.text.ms;
                     console.log("Data valid from: " + quakeWarningValidFrom);
-                    console.log(quakeWarningDate, quakeWarningTitleEN, quakeWarningTextEN, quakeWarningTextMY);
                     twilio.twilioMessage(quakeWarningTextEN);
                 }else {
                     let declaration = "Currently, no declared warnings\n" + my_date.todaySlashDate();
@@ -100,7 +100,7 @@ function QuakeCall(){
 
 // Call functions
 setInterval(function(){
-    QuakeCall();
+    //QuakeCall();
 }, halfHour)
 
 app.listen(process.env.PORT || 3000, function(){
